@@ -57,15 +57,15 @@ function ListingDetail() {
                     <div className='md:col-span-2'>
                         <ImageGallery carDetail={carDetail} />
                         <Description carDetail={carDetail} />
-                        <Features features={carDetail?.features} />
-                        <FinanacialCalculator carDetail={carDetail} />
+                        {/* <Features features={carDetail?.features} /> */}
+                        {/* <FinanacialCalculator carDetail={carDetail} /> */}
                     </div>
 
                     {/* Right */}
                     <div>
                         <Pricing carDetail={carDetail} />
                         <Specification carDetail={carDetail} />
-                        <OwnersDetail carDetail={carDetail} />
+                        {/* <OwnersDetail carDetail={carDetail} /> */}
                     </div>
                 </div>
 

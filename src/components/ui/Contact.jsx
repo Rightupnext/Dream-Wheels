@@ -13,8 +13,9 @@ const Contact = () => {
         Our Store
       </p>
       <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam
-        voluptatum cupiditate veritatis in, accusamus quisquam.
+      At Dream Wheel Motors, we bring you the best selection of new and 
+      pre-owned cars at unbeatable prices. Whether you're looking for a brand-new luxury vehicle, a budget-friendly used car, 
+      or a high-performance SUV, we have something for every need and budget.
       </p>
     </div>
     <div className="mt-10">
@@ -44,9 +45,9 @@ const Contact = () => {
               Address
             </dt>
             <dd className="mt-2 text-base text-gray-500">
-              123 Main St, Suite 100
+              Kamarajar Street
               <br />
-              Anytown, USA 12345
+              Singnallur Coimbatore
             </dd>
           </div>
         </div>

@@ -12,6 +12,15 @@ import whats from "../../images/whatsapp.png";
 function CarItem({ car }) {
   const [showPopup, setShowPopup] = useState(false);
 
+  const handlePopup = (e) => {
+    e.stopPropagation(); // Prevents the event from bubbling up and triggering the parent click event
+    setShowPopup(true); // Show the popup when clicking the WhatsApp button
+  };
+
+  const closePopup = () => {
+    setShowPopup(false); // Close the popup
+  };
+
   return (
     <div className="z-[0] rounded-xl bg-white border hover:shadow-md cursor-pointer relative p-2">
       {/* Image */}
@@ -46,12 +55,9 @@ function CarItem({ car }) {
 
         <Separator className="my-2 z-0" />
 
-        <div className="flex items-center justify-between px-2 z-0">
+        <div className="flex items-center justify-between px-2 z-99">
           <button 
-            onClick={(e) => {
-              e.stopPropagation();
-              setShowPopup(true);
-            }} 
+            onClick={handlePopup} // Only trigger popup when this button is clicked
             className="bg-green-500 text-white p-2 rounded-full shadow-md hover:bg-green-600 transition-all flex items-center justify-center z-0"
           >
             <img src={whats} alt="WhatsApp" width={30} height={30} className="z-0" />
@@ -64,8 +70,14 @@ function CarItem({ car }) {
 
       {/* Pop-up Modal */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[-1]">
-          <div className="bg-white p-6 rounded-lg w-full max-w-xs md:max-w-sm z-0">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[99]"
+          onClick={closePopup} // Close popup when clicking outside the modal
+        >
+          <div 
+            className="bg-white p-6 rounded-lg w-full max-w-xs md:max-w-sm z-0"
+            onClick={(e) => e.stopPropagation()} // Prevents closing popup when clicking inside modal
+          >
             <h2 className="text-lg font-bold text-center mb-4 z-0">Contact Us</h2>
             <div className="flex flex-col gap-4 z-0">
               <a 
@@ -84,7 +96,7 @@ function CarItem({ car }) {
               </button>
             </div>
             <button 
-              onClick={() => setShowPopup(false)} 
+              onClick={closePopup} 
               className="mt-4 w-full text-center bg-gray-300 hover:bg-gray-400 p-2 rounded-md transition-all z-0"
             >
               Close

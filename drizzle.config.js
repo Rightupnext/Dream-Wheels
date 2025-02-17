@@ -3,6 +3,6 @@ export default {
     schema: "./configs/schema.js",
     dialect: 'postgresql',
     dbCredentials: {
-      url: 'postgresql://accounts:mv4Mx0OdHZQA@ep-weathered-heart-a58wmzem.us-east-2.aws.neon.tech/car-marketplace?sslmode=require',
+      url: 'postgresql://neondb_owner:npg_q8toQekpA7ZL@ep-soft-resonance-a8clxcwg-pooler.eastus2.azure.neon.tech/car-marketplace?sslmode=require',
     }
   };
