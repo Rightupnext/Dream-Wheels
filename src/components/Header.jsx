@@ -9,7 +9,7 @@ function Header() {
     const {user,isSignedIn}=useUser();
   return (
     <div className='flex justify-between items-center shadow-sm p-5'>
-        <div className='flex  col'>
+        <div className='flex  col m'>
         <Link to={'/'}>
             {/* <img src={logo} width={180} height={80} /> */}
             {/* <Navbar/> */}
@@ -19,15 +19,15 @@ function Header() {
         </Link>
         </div>
         
-        <ul className='hidden  md:flex gap-16'>
+        <ul className='hidden  md:flex '>
         <Link to={'/'}>
-            <li className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-black'>Home</li>
+            <li className='ml-[180px] font-medium hover:scale-105 transition-all cursor-pointer hover:text-black'>Home</li>
         </Link>
         <Link to={"/contact"}>
-            <li className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-black'>Contact</li>
+            {/* <li className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-black'>Contact</li> */}
             </Link>
-            <li className='text-red-600 font-medium hover:scale-105 transition-all cursor-pointer hover:text-[#d90429] border-solid'>+91 8838620347</li>
-            <li className='text-red-600 font-medium hover:scale-105 transition-all cursor-pointer hover:text-[#d90429]'>+91 9025760713</li>
+            {/* <li className='text-red-600 font-medium hover:scale-105 transition-all cursor-pointer hover:text-[#d90429] border-solid'>+91 8838620347</li> */}
+            {/* <li className='text-red-600 font-medium hover:scale-105 transition-all cursor-pointer hover:text-[#d90429]'>+91 9025760713</li> */}
         </ul>
 
         {isSignedIn?
